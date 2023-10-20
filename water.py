@@ -27,17 +27,7 @@ def getresult(c, con):
 
     X = [x11, x12, x13, x14, x21, x22, x23, x24, x31, x32, x33]
 
-    #c = [160, 130, 220, 170, 140, 130, 190, 150, 190, 200, 230]
-
-
-
-
-
-
-# 目标函数
-    z = 0
-    for i in range(len(X)):
-        z += X[i]*c[i]
+    z = sum(X[i]*c[i] for i in range(len(X)))
     #print(z)
     prob += z
 
